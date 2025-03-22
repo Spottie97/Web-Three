@@ -1,0 +1,30 @@
+{
+  "name": "realm-of-eldoria",
+  "version": "0.1.0",
+  "description": "A web-based 3D multiplayer MMORPG set in a medieval fantasy world",
+  "scripts": {
+    "install:all": "npm install && npm run install:client && npm run install:server",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "build": "npm run build:client && npm run build:server",
+    "start": "cd server && npm run start"
+  },
+  "keywords": [
+    "mmorpg",
+    "babylon.js",
+    "colyseus",
+    "game",
+    "3d",
+    "multiplayer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
